@@ -1,0 +1,58 @@
+.container {
+    max-width: 75vw;
+    min-width: 670px;
+    margin: 0 auto;
+}
+
+fieldset input {
+    height: 24px    ;
+}
+
+.showPasswords {
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 10px;
+    display: none;
+    align-items: center;
+}
+
+.creat-password.showPasswords {
+    height: 50px;
+    display: flex;
+}
+
+.printer {
+    margin: 0;
+    padding-left: 20px;
+}
+
+form.was-validated .password-Length:invalid {
+    border-color: red;
+}
+
+
+form.was-validated .password-Length:valid {
+    border-color: green;
+}
+
+
+.invalid-feedback, .valid-feedback {
+    display: none;
+}
+
+.invalid-feedback {
+    color: red;
+}
+
+.valid-feedback {
+    color: green;
+}
+
+form.was-validated .password-Length:valid .invalid-feedback {
+    display: initial;
+}
+
+form.was-validated .password-Length:valid .valid-feedback {
+    display: initial;
+}
+
