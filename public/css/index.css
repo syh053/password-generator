@@ -19,6 +19,7 @@ fieldset input {
 .creat-password.showPasswords {
     height: 50px;
     display: flex;
+    background-color: #D9FFFF;
 }
 
 .printer {

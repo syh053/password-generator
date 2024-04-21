@@ -4,76 +4,70 @@
 
     <hr>
 
-    <form id="form-submit" novalidate>
-
-        {{!-- password length --}}
-        <div class="d-flex">
-            <label for="Password Length" class="col-sm-4">Password Length</label>
+    <form>
+        {{!-- Password Length --}}
+        <div class="mb-3 d-flex">
+            <label for="length" class="form-label col-sm-3">Password Length</label>
             <div class="col-sm-8">
-                <input type="number" id="Password Length" class="password-Length w-100" min="4" max="16"
-                    name="Password-Length" required>
-                <small>Length is available between 4 ~ 16.</small>
+                <input type="number" class="form-control" id="length" name="Password-Length" max="16" min="4" required>
+                <div class="form-text">Length is available between 4 ~ 16</div>
+            </div>
 
-                <div class="invalid-feedback">
-                    This field is required.
-                </div>
+        </div>
 
-                <div class="valid-feedback">
-                    Good!
-                </div>
+        {{!-- Selectors --}}
+        <div class="d-flex my-3">
+            <label class="form-check-label col-sm-3" for="lowercase">Include Lowercase Characters</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" id="lowercase" name="filters">
+                <label class="form-check-label" for="lowercase">(e.g. abcdefg)</label>
             </div>
         </div>
 
-        {{!-- filter options --}}
-
-        <fieldset>
-            {{!-- Include Lowercase Characters --}}
-            <div class="d-flex my-3">
-                <label for="lower-filter" class="col-sm-4">Include Lowercase Characters</label>
-                <input type="checkbox" class="col-sm-1" id="lower-filter" name="filters" value="1">
-                <label for="lower-filter" class="col-sm-4">(e.g. abcdefg)</label>
+        <div class="d-flex my-3">
+            <label class="form-check-label col-sm-3" for="uppercase">Include Uppercase Characters</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="2" id="uppercase" name="filters">
+                <label class="form-check-label" for="uppercase">(e.g. ABCDEFG)</label>
             </div>
+        </div>
 
-            {{!-- Include Uppercase Characters --}}
-            <div class="d-flex my-3">
-                <label for="upper-filter" class="col-sm-4">Include Uppercase Characters</label>
-                <input type="checkbox" class="col-sm-1" id="upper-filter" name="filters" value="2">
-                <label for="upper-filter" class="col-sm-4">(e.g. ABCDEFG)</label>
+        <div class="d-flex my-3">
+            <label class="form-check-label col-sm-3" for="numbers">Include Numbers</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="3" id="numbers" name="filters">
+                <label class="form-check-label" for="numbers">(e.g. 12346)</label>
             </div>
+        </div>
 
-            {{!-- Include Numbers --}}
-            <div class="d-flex my-3">
-                <label for="filter-numbers" class="col-sm-4">Include Numbers</label>
-                <input type="checkbox" class="col-sm-1" id="filter-numbers" name="filters" value="3">
-                <label for="filter-numbers" class="col-sm-4">(e.g. 123456)</label>
+        <div class="d-flex my-3">
+            <label class="form-check-label col-sm-3" for="symbols">Include Symbols</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="4" id="symbols" name="filters">
+                <label class="form-check-label" for="symbols">(e.g. @#$%)</label>
             </div>
-
-            {{!-- Include Symbols --}}
-            <div class="d-flex my-3">
-                <label for="filter-symblos" class="col-sm-4">Include Numbers</label>
-                <input type="checkbox" class="col-sm-1" id="filter-symblos" name="filters" value="4">
-                <label for="filter-symblos" class="col-sm-4">(e.g. @#$%)</label>
-            </div>
-        </fieldset>
+        </div>
 
         {{!-- Exclude Characters --}}
-        <div class="d-flex">
-            <label for="Exclude Characters" class="col-sm-4">Exclude Characters</label>
-
+        <div class="mb-3 d-flex">
+            <label for="exclude" class="form-label col-sm-3">Exclude Characters</label>
             <div class="col-sm-8">
-                <input type="text" id="Exclude Characters" class="w-100" name="exclude-characters">
-                <small>This characters will not appear in the password</small>
+                <input type="text" class="form-control" id="exclude" name="exclude-characters">
+                <div class="form-text">These characters will not appear in the password</div>
             </div>
+
         </div>
 
         {{!-- Generate place --}}
-        <div class="showPasswords bg-info" id="result">
+        <div class="showPasswords creat-password" id="result">
             <p class="printer">Your password is : </p>
         </div>
 
-        <button type="submit" class="btn btn-success my-3">Generate Password</button>
-
+        {{!-- Submit Button --}}
+        <button type="submit" class="btn btn-success my-3">Submit</button>
     </form>
+
+
 </div>
 
 
