@@ -1,4 +1,5 @@
 .container {
+    padding: 0;
     max-width: 75vw;
     min-width: 670px;
     margin: 0 auto;
@@ -57,3 +58,21 @@ form.was-validated .password-Length:valid .valid-feedback {
     display: initial;
 }
 
+.footer {
+    height: 50px;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer p {
+    color: #7B7B7B;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+
+.footer p strong {
+    color: #84C1FF;
+}

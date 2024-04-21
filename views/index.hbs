@@ -1,10 +1,10 @@
 <div class="container bg-body mw-50">
 
-    <h4 class="mt-5 pt-3">Ramdom Password Genrator<i class="fa-solid fa-key ms-1"></i></h4>
+    <h4 class="mt-5 mx-3 pt-3">Ramdom Password Genrator<i class="fa-solid fa-key ms-1"></i></h4>
 
-    <hr>
+    <hr class="mx-3">
 
-    <form novalidate>
+    <form class="mx-3" novalidate >
         {{!-- Password Length --}}
         <div class="mb-3 d-flex">
             <label for="length" class="form-label col-sm-3">Password Length</label>
@@ -22,7 +22,7 @@
             <label class="form-check-label col-sm-3" for="lowercase">Include Lowercase Characters</label>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="1" id="lowercase" name="filters">
-                <label class="form-check-label" for="lowercase">(e.g. abcdefg)</label>
+                <label for="lowercase">(e.g. abcdefg)</label>
             </div>
         </div>
 
@@ -30,7 +30,7 @@
             <label class="form-check-label col-sm-3" for="uppercase">Include Uppercase Characters</label>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="2" id="uppercase" name="filters">
-                <label class="form-check-label" for="uppercase">(e.g. ABCDEFG)</label>
+                <label for="uppercase">(e.g. ABCDEFG)</label>
             </div>
         </div>
 
@@ -38,7 +38,7 @@
             <label class="form-check-label col-sm-3" for="numbers">Include Numbers</label>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="3" id="numbers" name="filters">
-                <label class="form-check-label" for="numbers">(e.g. 12346)</label>
+                <label for="numbers">(e.g. 12346)</label>
             </div>
         </div>
 
@@ -46,7 +46,7 @@
             <label class="form-check-label col-sm-3" for="symbols">Include Symbols</label>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="4" id="symbols" name="filters">
-                <label class="form-check-label" for="symbols">(e.g. @#$%)</label>
+                <label for="symbols">(e.g. @#$%)</label>
             </div>
         </div>
 
@@ -67,8 +67,13 @@
 
         {{!-- Submit Button --}}
         <button type="submit" class="btn btn-success my-3">Submit</button>
+
+
     </form>
 
+    <div class="footer">
+        <p class="me-3">idea is inspired by <strong>strong Random Password</strong></p>
+    </div>
 
 </div>
 
