@@ -4,13 +4,15 @@
 
     <hr>
 
-    <form>
+    <form novalidate>
         {{!-- Password Length --}}
         <div class="mb-3 d-flex">
             <label for="length" class="form-label col-sm-3">Password Length</label>
             <div class="col-sm-8">
                 <input type="number" class="form-control" id="length" name="Password-Length" max="16" min="4" required>
                 <div class="form-text">Length is available between 4 ~ 16</div>
+                <div class="valid-feedback">Good!</div>
+                <div class="invalid-feedback">This field is required.</div>
             </div>
 
         </div>
@@ -59,7 +61,7 @@
         </div>
 
         {{!-- Generate place --}}
-        <div class="showPasswords creat-password" id="result">
+        <div class="showPasswords" id="result">
             <p class="printer">Your password is : </p>
         </div>
 
