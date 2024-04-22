@@ -4,9 +4,18 @@ const numbers = "0123456789"
 const symbols = "`!@#$%^&*()-_=+{}[]|:;'<>,.?/"
 
 
+//產生隨機密碼函示
+let randomPassword = conditions => {
+    let passwords = ""
+    for ( let i = 0; i < option.length; i++ ) {
+        passwords += conditions[ Math.floor( Math.random() * conditions.length ) ]
+    }
+    return passwords
+}
+
 //定義條件
 const option = {
-    length : 5,
+    length : 16,
     lowercaseSwitch : true,
     uppercaseSwitch: true,
     numberSwitch: true,
@@ -14,24 +23,24 @@ const option = {
     excludeCharacters: ""
 }
 
-let passwords = []  //建立空陣列
+let conditions = []  //建立空陣列
 
 //符合條件的話就將 passwords 與其他資料用 concat() 指令合併
 if ( option.lowercaseSwitch === true ) {
-    passwords = passwords.concat(lowercase.split(""))
+    conditions = conditions.concat(lowercase.split(""))
 }
 
 if (option.uppercaseSwitch === true) {
-    passwords = passwords.concat(uppercase.split(""))
+    conditions = conditions.concat(uppercase.split(""))
 }
 
 if (option.numberSwitch === true) {
-    passwords = passwords.concat(numbers.split(""))
+    conditions = conditions.concat(numbers.split(""))
 }
 
 if (option.symbolSwitch === true) {
-    passwords = passwords.concat(symbols.split(""))
+    conditions = conditions.concat(symbols.split(""))
 }
 
 
-console.log(passwords)
+module.exports = { randomPassword, conditions }

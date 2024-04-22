@@ -1,5 +1,6 @@
 const express = require("express")  //引入 express 模組
 const {engine} = require("express-handlebars")  //引入 express handlebars 模組
+const { randomPassword, conditions } = require("./public/javascripts/generate_password.js")
 
 
 const app = express()   //將 express 除存在變數 app
@@ -24,8 +25,10 @@ app.get( "/", (req, res ) => {
 
 //設定路由 "/"
 app.get( "/password", (req, res ) => {
+    const passwordLength = req.query.length
+    // const
+    console.log(passwordLength)
     res.render("index")
-
 })
 
 
@@ -40,3 +43,6 @@ app.get("/password/:id", ( req, res ) => {
 app.listen( port, () => {
     console.log( `express server is running on http://localhost:${port}` )
 } )
+
+
+console.log(randomPassword(conditions))

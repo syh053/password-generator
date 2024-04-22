@@ -5,10 +5,6 @@
     margin: 0 auto;
 }
 
-fieldset input {
-    height: 24px    ;
-}
-
 .showPasswords {
     height: 50px;
     margin-top: 15px;
