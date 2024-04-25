@@ -15,12 +15,12 @@ let randomPassword = conditions => {
 
 //定義條件
 const option = {
-    length : 16,
+    length : 8,
     lowercaseSwitch : true,
     uppercaseSwitch: true,
     numberSwitch: true,
     symbolSwitch: true,
-    excludeCharacters: ""
+    excludeCharacters: "#$%^&*()-_=+{}[]|:;'<>,.?/"
 }
 
 let conditions = []  //建立空陣列
@@ -41,6 +41,14 @@ if (option.numberSwitch === true) {
 if (option.symbolSwitch === true) {
     conditions = conditions.concat(symbols.split(""))
 }
+
+if (option.excludeCharacters) {
+    conditions = conditions.filter( character => !option.excludeCharacters.includes(character) )
+}
+
+
+
+console.log(conditions)
 
 
 module.exports = { randomPassword, conditions }
