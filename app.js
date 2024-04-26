@@ -9,6 +9,9 @@ const port = 3000       //設定port
 
 app.use(express.static("public"))   //設定靜態檔案
 
+// use body-parser to get key-value pairs
+app.use(express.urlencoded({ extended: true }))
+
 
 //設定在 Express 中使用的樣版引擎
 app.engine('.hbs', engine({extname: '.hbs'}));
@@ -24,19 +27,20 @@ app.get( "/", (req, res ) => {
 
 
 //設定路由 "/"
-app.get( "/password", (req, res ) => {
+app.get( "/password", ( req, res ) => {
     const passwordLength = req.query.length
-    // const
-    console.log(passwordLength)
+    // console.log(passwordLength)
     res.render("index")
 })
 
 
-//設定動態路由
-app.get("/password/:id", ( req, res ) => {
-    const id = req.params.id
-    res.send(`The id is ${id}`)
+app.post('/pass', ( req, res ) => {
+    const options = req.body
+    const passwords = randomPassword(options)
+    
+    res.render("index", { passwords, options })
 })
+
 
 
 //啟動伺服器
@@ -45,4 +49,4 @@ app.listen( port, () => {
 } )
 
 
-console.log(randomPassword(conditions))
+// console.log(randomPassword(conditions))

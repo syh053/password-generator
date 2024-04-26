@@ -9,15 +9,11 @@
     height: 50px;
     margin-top: 15px;
     border-radius: 10px;
-    display: none;
+    display: flex;
     align-items: center;
+    background-color: #D9FFFF
 }
 
-.creat-password.showPasswords {
-    height: 50px;
-    display: flex;
-    background-color: #D9FFFF;
-}
 
 .printer {
     margin: 0;
@@ -46,11 +42,11 @@ form.was-validated .password-Length:valid {
     color: green;
 }
 
-form.was-validated .password-Length:valid .invalid-feedback {
+form.was-validated .password-Length:valid ~ .invalid-feedback {
     display: initial;
 }
 
-form.was-validated .password-Length:valid .valid-feedback {
+form.was-validated .password-Length:valid ~ .valid-feedback {
     display: initial;
 }
 
