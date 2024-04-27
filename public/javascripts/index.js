@@ -34,11 +34,7 @@ form.addEventListener("submit", (event) => {
     if (!form.checkValidity()) {
         form.classList.add("was-validated")
         event.preventDefault()
-        event.stopPropagation()
-        
-
-        // alert("有欄位尚未輸入或欄位輸入錯誤!")
-        // console.log(passwordNumber)
+        event.stopPropagation()       
     }
 } )
 
