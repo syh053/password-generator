@@ -68,3 +68,12 @@ form.was-validated .password-Length:valid ~ .valid-feedback {
 .footer p strong {
     color: #84C1FF;
 }
+
+.showPasswords p {
+    color: #3483eb;
+}
+
+
+strong {
+    color: #eb3434;
+}

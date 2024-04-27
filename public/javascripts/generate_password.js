@@ -29,6 +29,10 @@ let randomPassword = options => {
         conditions = conditions.filter(character => !options.excludeCharacters.includes(character))
     }
 
+    if ( conditions.length === 0 ) {
+        return "There is no valid character in your selection."
+    }
+
 
     //開始篩選
     let passwords = ""

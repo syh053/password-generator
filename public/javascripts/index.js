@@ -37,8 +37,8 @@ form.addEventListener("submit", (event) => {
         event.stopPropagation()
         
 
-        alert("有欄位尚未輸入或欄位輸入錯誤!")
-        console.log(passwordNumber)
+        // alert("有欄位尚未輸入或欄位輸入錯誤!")
+        // console.log(passwordNumber)
     }
 } )
 
