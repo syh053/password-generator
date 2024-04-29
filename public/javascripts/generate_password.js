@@ -1,5 +1,5 @@
 //產生隨機密碼函示
-let randomPassword = options => {
+const randomPassword = options => {
 
     const lowercase = "abcdefghijklmnopqrstuvwxyz"
     const uppercase = lowercase.toUpperCase()
